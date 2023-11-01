@@ -16,6 +16,7 @@
     "easycom",
     "miniapp",
     "miniprogram",
+    "mutli",
     "persistedstate",
     "pinia"
   ]
