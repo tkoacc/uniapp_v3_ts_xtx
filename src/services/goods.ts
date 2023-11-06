@@ -1,4 +1,4 @@
-import { GoodsResult } from './../types/goods.d'
+import type { GoodsResult } from '@/types/goods'
 import { http } from '@/utils/http'
 /**
  * 获取商品详情
