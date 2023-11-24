@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { postMemberAddressAPI } from '@/services/address'
+import { getMemberAddressByIdAPI, postMemberAddressAPI } from '@/services/address'
+import { onLoad } from '@dcloudio/uni-app'
 import { ref } from 'vue'
 
 // 表单数据
@@ -19,6 +20,18 @@ const query = defineProps<{
   id?: string
 }>()
 
+// 获取收货地址详情数据
+const getMemberAddressByIdData = async () => {
+  if (query.id) {
+    const res = await getMemberAddressByIdAPI(query.id)
+    // 把数据合并到表单中
+    Object.assign(form.value, res.result)
+  }
+}
+// 页面加载
+onLoad(() => {
+  getMemberAddressByIdData()
+})
 // 动态设置标题
 uni.setNavigationBarTitle({ title: query.id ? '修改地址' : '新建地址' })
 
