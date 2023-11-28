@@ -11,14 +11,17 @@
     "manifest.json": "jsonc" // manifest.json 可以写注释
   },
   "cSpell.words": [
+    "addcart",
     "autoscan",
     "bilibili",
+    "buynow",
     "composables",
     "currsub",
     "dcloudio",
     "easycom",
     "Getphonenumber",
     "heima",
+    "Localdata",
     "miniapp",
     "miniprogram",
     "mutli",
