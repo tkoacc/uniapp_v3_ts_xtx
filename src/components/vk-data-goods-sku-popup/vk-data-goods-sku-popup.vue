@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable -->
 	<view class="vk-data-goods-sku-popup" catchtouchmove="true" :class="valueCom && complete ? 'show' : 'none'" @touchmove.stop.prevent="moveHandle" @click.stop="stop">
 		<!-- 页面内容开始 -->
 		<view class="mask" @click="close('mask')"></view>
@@ -123,6 +124,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 var vk; // vk依赖
 var goodsCache = {}; // 本地商品缓存
 export default {
@@ -979,10 +981,6 @@ export default {
 		valueCom() {
 			// #ifndef VUE3
 			return this.value;
-			// #endif
-
-			// #ifdef VUE3
-			return this.modelValue;
 			// #endif
 		},
 		// 最大购买数量
