@@ -95,11 +95,11 @@ const gotoPayment = () => {
       title: '请选择商品',
       icon: 'none',
     })
-  } else {
-    uni.navigateTo({
-      url: '/pages/pay/pay',
-    })
   }
+  // 跳转到结算页面
+  uni.navigateTo({
+    url: '/pagesOrder/create/create',
+  })
 }
 </script>
 
