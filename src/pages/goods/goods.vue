@@ -117,7 +117,10 @@ const onAddCart = async (ev: SkuPopupEvent) => {
 }
 // 立即购买
 const onBuyNow = (ev: SkuPopupEvent) => {
+  // 跳转页面并传参
   uni.navigateTo({ url: `/pagesOrder/create/create?skuId=${ev._id}&count=${ev.buy_num}` })
+  // 关闭SKU组件
+  isShowSku.value = false
 }
 </script>
 
