@@ -51,6 +51,8 @@ const onOrderPay = async (id: string) => {
     // 更新订单状态
     const order = OrderList.value.find((item) => item.id === id)
     order!.orderState = OrderState.DaiFaHuo
+    // 刷新订单列表
+    await getMemberOrderData()
   }
 }
 </script>
